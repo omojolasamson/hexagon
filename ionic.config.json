@@ -1,5 +1,7 @@
 {
   "name": "hexagon",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

@@ -1,3 +1,45 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  <ion-menu side="start" menuId="first" contentId="content1">
+            
+        <div class="colo">
+            <ion-header>
+        
+              <ion-toolbar>
+                <div class="logo">
+                  <img src="./assets/icon/logo.png">
+              </div>
+                <ion-title>Hexagon</ion-title>
+              </ion-toolbar>
+            </ion-header>
+            <ion-content>
+              <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages">
+                <div class="nav-item" [routerLink]="[p.url]">
+                    <span class="icon">{{p.icon}}</span>
+                    {{p.title}}
+                    <span class="divider"></span>
+                </div>
+              </ion-menu-toggle>
+            </ion-content>
+            <div class="footer">
+              <div class="footer-nav">
+                  <ul>
+                      <li (click)="leaveAReview()">Like this app? Leave a review!</li>
+                  </ul>
+              </div>
+            
+              <div class="footer-social">
+                  <ion-icon (click)="openInstagramProfile()" name="logo-instagram"></ion-icon>
+                  <ion-icon (click)="openFacebookProfile()" name="logo-facebook"></ion-icon>
+                  <ion-icon (click)="openTwitterProfile()" name="logo-twitter"></ion-icon>
+                  <ion-icon (click)="openWebsite()" name="globe"></ion-icon>
+              </div>
+            
+              <div class="footer-app-version">
+                  Version v{{version}}
+              </div>
+            </div>
+        </div>
+  </ion-menu>
+<ion-router-outlet id="content1"></ion-router-outlet>
 </ion-app>
+

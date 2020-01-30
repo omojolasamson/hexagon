@@ -24,4 +24,44 @@ export class AppComponent {
       this.splashScreen.hide();
     });
   }
+
+  version: string = "0.7.2";
+
+  appPages = [
+      {
+          title: 'Home',
+          url: '/home/landing',
+          icon: '🏠'
+      },
+      {
+          title: 'My Profile',
+          url: '/profile',
+          icon: '👤'
+      },
+      {
+          title: 'Switch City',
+          url: '/settings/set-location',
+          icon: '🏙'
+},
+      {
+          title: "Promotions",
+          url: "/promotions",
+          icon: "💸"
+      }
+  ];
+
+
+
+  ngOnInit() { }
+
+  leaveAReview() { }
+
+  openFacebookProfile() { }
+
+  openInstagramProfile() { }
+
+  openTwitterProfile() { }
+
+  openWebsite() { }
+
 }
